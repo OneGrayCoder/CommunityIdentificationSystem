@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="CommunityIdentificationSystem:war exploded">
+    <output-path>D:/ProgramFiles/TOMCAT/apache-tomcat-8.5.50/webapps/IdenSystem/</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="CommunityIdentificationSystem/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="CommunityIdentificationSystem" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="JUnit4" module-name="CommunityIdentificationSystem" />
+          <element id="library" level="project" name="c3p0-0.9.5.5" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/standard.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/c3p0-0.9.5.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/mchange-commons-java-0.2.19.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.45.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

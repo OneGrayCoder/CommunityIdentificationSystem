@@ -1,0 +1,95 @@
+
+<link href="../css/INDEX.css" rel="stylesheet" type="text/css">
+<html>
+<style type="text/css">
+<!--
+.STYLE1 {	font-size: 24px;
+	font-weight: bold;
+}
+-->
+</style>
+<head> <!--这里是用户新增页面-->
+<title>Untitled Document</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script type="text/javascript" src="../javascript/validator.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+<script type="text/javascript" src="../javascript/handleArchive.js"></script>
+<script language="JavaScript">
+function doDBClick(url,operator,type) {
+  if (operator == false) {
+    document.forms[0].action = url + "&op=view";
+    document.forms[0].submit();
+  } else {
+    document.forms[0].action = url;
+    document.forms[0].submit();
+  }
+}
+</script>
+</head>
+
+<body>
+
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" class="where">
+  <tr>
+    <td>&nbsp;&nbsp;※&nbsp;您的位置:我的桌面--&gt;系统管理--&gt;用户管理</td>
+    <td align="right">&nbsp;</td>
+  </tr>
+</table>
+<br/>
+<br>
+  <table width="96%" height="97" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#bdc7d3" class="text_lb">
+    <tr>
+      <form action="../UserSvl?reqType=addUser" method="post">
+      <td width="67" height="23" align="right" bgcolor="#FFFFFF">登录用户名:</td>
+      <td width="296" bgcolor="#FFFFFF"><input name="loginName" type="text" id="textarea" value="" size="30" class="pi"></td>
+      <td width="84" align="right" bgcolor="#FFFFFF">姓 名:</td><!--fullname-->
+      <td width="317" bgcolor="#FFFFFF"><input name="fullname" type="text" id="textarea4" value="" size="30" class="pi"></td>
+    </tr>
+    <tr>
+      <td height="23" align="right" bgcolor="#FFFFFF">性别:</td>
+      <td bgcolor="#FFFFFF"> <input type="radio" name="sex" value="男">男<input type="radio" name="sex" value="女">女</td>
+
+      <td align="right" bgcolor="#FFFFFF">所属公司级别:</td>
+      <td bgcolor="#FFFFFF"><span class="text">
+        <select name="companyLv" id="select" class="input">
+          <option>请选择</option>
+		  <option value="1">总公司 </option><!--1为总公司 2为分公司-->
+		  <option value="2">分公司</option>
+        </select>
+      </span></td>
+    </tr>
+    <tr>
+      <td height="23" align="right" bgcolor="#FFFFFF">密码:</td>
+      <td bgcolor="#FFFFFF"><input name="pwd" type="password" id="textarea3" value="" size="30" class="pi" required></td>
+      <td align="right" bgcolor="#FFFFFF">确认密码:</td>
+      <td bgcolor="#FFFFFF"><input name="confirm_pwd" type="password" id="textarea5" value="" size="30" class="pi" required></td>
+    </tr>
+    <tr>
+      <td height="23" align="right" bgcolor="#FFFFFF">是否可用:</td>
+      <td bgcolor="#FFFFFF">
+        <input type="radio" name="Enable" id="radio3" value="是" />
+是
+  <input type="radio" name="Enable" id="radio4" value="否" />
+  否
+</td>
+      <td align="right" bgcolor="#FFFFFF">邮 箱:</td>
+      <td bgcolor="#FFFFFF"><input name="email" type="text" id="textarea4" value="" size="30" class="pi"></td>
+    </tr>
+    <tr>
+      <td height="23" align="right" bgcolor="#FFFFFF">用户名:</td><!--和姓名不同,他是int类型-->
+      <td bgcolor="#FFFFFF"> <input type="text" name="username"  class="pi"/></td>
+      <td height="23" align="right" bgcolor="#FFFFFF">账号之所属公司</td>
+      <td bgcolor="#FFFFFF"> <input type="text" name="belongCompany"  class="pi" /></td>
+    </tr>
+  </table>
+  <table width="96%" height="30" border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td width="67%" align="center" class="text" nowrap><input type="submit" name="searchbtn3" value="保  存" class="button_new">
+      <input type="submit" name="searchbtn3" value="返  回" class="button_new"onClick="javascript:window.history.back()" >
+      <input type="hidden" name="mod" value="no">
+      </form>
+    &nbsp;&nbsp; </td>
+  </tr>
+</table>
+</body>
+</html>
